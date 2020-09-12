@@ -4,6 +4,6 @@
 class Output
 {
 public:
-	void showResult(double result);
+	static void showResult(double result);
 };
 

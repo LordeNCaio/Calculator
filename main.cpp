@@ -5,10 +5,8 @@
 #include "Calculadora.h"
 
 int main()
-{   
-    Input in;
-    Output out;
-    Calculadora* calc = new Calculadora(in, out);
+{ 
+    Calculadora* calc = new Calculadora();
 
     double value1, value2;
     std::string op;
@@ -17,25 +15,14 @@ int main()
     std::cin >> value1;
     std::cout << "Insert second value: ";
     std::cin >> value2;
-    in.setVector1(value1);
-    in.setVector2(value2);
     std::cout << " | + | - | * | / |\n";
     std::cout << "Choose operation: ";
     std::cin >> op;
 
-    if(op == "+"){
-        out.showResult(calc->add(in));
-    }else if(op == "-"){
-        out.showResult(calc->subtract(in));
-    }else if(op == "*"){
-        out.showResult(calc->multiply(in));
-    }else{
-        out.showResult(calc->divide(in));
+    if(op == "+")
+    {
+        calc->ShowValue(calc->add(value1, value2));
     }
-  
-    
-
-
 
 }
 
